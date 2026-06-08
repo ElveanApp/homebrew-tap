@@ -6,8 +6,8 @@ class Edgar < Formula
   license "MIT"
   version "1.0.0"
 
-  depends_on xcode: ["15.0", :build]
   depends_on macos: :ventura
+  uses_from_macos "swift"
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox"
